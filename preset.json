@@ -2,12 +2,14 @@
     "useConfigFiles": true,
     "router": true,
     "vuex": true,
-    "cssPreprocessor": "sass",
+    "cssPreprocessor": "less",
     "plugins": {
       "@vue/cli-plugin-babel": {},
       "@vue/cli-plugin-eslint": {
-        "config": "airbnb",
+        "config": "standard",
         "lintOn": ["save", "commit"]
       }
+    },
+    "configs": {
     }
   }
