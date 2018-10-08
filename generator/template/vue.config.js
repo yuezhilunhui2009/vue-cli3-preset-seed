@@ -40,7 +40,6 @@ module.exports = {
     outputDir: 'dist',
     assetsDir: '',
     filenameHashing: true,
-    lintOnSave: true,
     // 需要经过 babel-loader 的 node_module
     transpileDependencies: [],
     productionSourceMap: true,
