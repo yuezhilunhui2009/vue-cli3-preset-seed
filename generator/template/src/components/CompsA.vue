@@ -8,36 +8,36 @@ export default {
     components: {},
     props: {},
     data () {
-    return {};
+        return {}
     },
     computed: {},
     watch: {},
     methods: {},
     beforeCreate () {
-        // now --> data observer --> event / watcher
+        // [server / client] now --> data observer --> event / watcher ready
     },
     created () {
-        // data observer --> event / watcher --> now --> compile template
+        // [server / client] event / watcher ready --> now --> compile template
     },
     beforeMount () {
-        // compile template --> now --> mounted
+        // [client] compile template --> now --> mounted
     },
     mounted () {
-        // vm.$el ready
+        // [client] DOM ready
     },
     beforeUpdate () {
-        // when data change
+        // [client] mounted --> when data change --> now --> virtual DOM updated
     },
     updated () {
-        //
+        // [client] virtual DOM updated --> now
     },
     beforeDestroy () {
-        //
+        // [client] mounted --> now --> teardown event / watcher ready / child components
     },
     destroyed () {
-        //
+        // [client] teardown event / watcher ready / child components --> now
     }
-};
+}
 </script>
 
 <style lang="less" scoped>
