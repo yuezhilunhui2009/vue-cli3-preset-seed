@@ -33,10 +33,8 @@ const generatePagesConfig = ({ pagesDir, customConfig = {} }) => {
   }
 }
 
-// vue inspect --rules
-// vue inspect --plugins
 module.exports = {
-  baseUrl: '/',
+  baseUrl: process.env.NODE_ENV === 'production' ? 'http://cdn_static_root/': '/',
   outputDir: 'dist',
   assetsDir: 'static',
   filenameHashing: true,
