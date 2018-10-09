@@ -27,23 +27,9 @@ const generatePagesConfig = ({ pagesDir, customConfig = {} }) => {
       return pagesConfig
     }, pagesConfig)
 
-  // return {
-  //   ...pagesConfig,
-  //   ...customConfig
-  // }
   return {
-    simple:
-      {
-        entry: 'src/pages/simple/index.js',
-        template: 'src/pages/simple/index.html',
-        filename: 'simple.html'
-      },
-    verbose:
-      {
-        entry: 'src/pages/verbose/index.js',
-        template: 'src/pages/verbose/index.html',
-        filename: 'verbose.html'
-      }
+    ...pagesConfig,
+    ...customConfig
   }
 }
 
@@ -57,7 +43,7 @@ module.exports = {
   // 需要经过 babel-loader 的 node_module
   transpileDependencies: [],
   productionSourceMap: true,
-  pages: generatePagesConfig(),
+  pages: generatePagesConfig({ pagesDir: './src/pages/' }),
   // 以 webpack-merge 形式修改 webpack 配置
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
