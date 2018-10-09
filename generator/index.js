@@ -29,7 +29,7 @@ module.exports = (api, options, rootOptions) => {
         const cliEntryFile = `${api.resolve(api.entryFile)}`
         const cliDefaultVue = cliEntryFile.replace(/main\.js$/, 'App.vue')
 
-        if (/\/src\/main\.js$/.test(cliEntryFile) &&
+        if (/\/(?:\\)?src\/(?:\\)?main\.js$/.test(cliEntryFile) &&
         fs.existsSync(cliEntryFile)) {
             try {
                 fs.unlinkSync(cliEntryFile)
@@ -38,7 +38,7 @@ module.exports = (api, options, rootOptions) => {
             }
         }
 
-        if (/\/src\/App\.vue$/.test(cliDefaultVue) &&
+        if (/\/(?:\\)?src\/(?:\\)?App\.vue$/.test(cliDefaultVue) &&
         fs.existsSync(cliDefaultVue)) {
             try {
                 fs.unlinkSync(cliDefaultVue)
