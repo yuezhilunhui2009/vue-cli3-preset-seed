@@ -9,5 +9,5 @@ Object.keys(commonFilters).forEach(key => Vue.filter(key, commonFilters[key]))
 new Vue({
     el: '#app',
     render: h => h(App),
-    template: '<App/>',
+    template: '<App/>'
 })
