@@ -1,5 +1,5 @@
 <template>
-    <div>CompsB</div>
+    <div>page_simple</div>
 </template>
 
 <script>

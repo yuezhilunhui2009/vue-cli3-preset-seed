@@ -1,5 +1,5 @@
 <template>
-    <div>vue component</div>
+    <div>CompsA</div>
 </template>
 
 <script>

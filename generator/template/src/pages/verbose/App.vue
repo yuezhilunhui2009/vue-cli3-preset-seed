@@ -1,5 +1,5 @@
 <template>
-    <div>vue component</div>
+    <div>page_with_router_vuex</div>
 </template>
 
 <script>
