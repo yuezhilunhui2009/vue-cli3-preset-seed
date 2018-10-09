@@ -1,3 +1,4 @@
+const os = require('os')
 const fs = require('fs')
 const path = require('path')
 
@@ -29,7 +30,10 @@ module.exports = (api, options, rootOptions) => {
         const cliEntryFile = `${api.resolve(api.entryFile)}`
         const cliDefaultVue = cliEntryFile.replace(/main\.js$/, 'App.vue')
 
-        if (/\/(?:\\)?src\/(?:\\)?main\.js$/.test(cliEntryFile) &&
+        const regEntryFile = os.platform() === 'win32' ? /\\src\\main\.js$/ : /\/src\/main\.js$/
+        const regDefaultVue = os.platform() === 'win32' ? /\\src\\App\.vue$/ : /\/src\/App\.vue$/
+
+        if (regEntryFile.test(cliEntryFile) &&
         fs.existsSync(cliEntryFile)) {
             try {
                 fs.unlinkSync(cliEntryFile)
@@ -38,7 +42,7 @@ module.exports = (api, options, rootOptions) => {
             }
         }
 
-        if (/\/(?:\\)?src\/(?:\\)?App\.vue$/.test(cliDefaultVue) &&
+        if (regDefaultVue.test(cliDefaultVue) &&
         fs.existsSync(cliDefaultVue)) {
             try {
                 fs.unlinkSync(cliDefaultVue)
