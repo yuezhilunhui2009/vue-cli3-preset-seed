@@ -38,11 +38,11 @@ npm run docs:build
 
 ## TODO
 - [x] 项目目录结构
-- [] postcss 配置
-- [] git-hook 配置
-- [] eslint 配置
-- [] babel 配置
-- [] browserslist 配置
-- [] proxy 配置
-- [] API 层
-- [] simple、verbose 两个示例页面
+- [ ] postcss 配置
+- [ ] git-hook 配置
+- [ ] eslint 配置
+- [ ] babel 配置
+- [ ] browserslist 配置
+- [ ] proxy 配置
+- [ ] API 层
+- [ ] simple、verbose 两个示例页面
