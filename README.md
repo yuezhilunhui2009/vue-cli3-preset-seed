@@ -9,7 +9,7 @@
 npm install -g @vue/cli
 
 # 根据远程 preset 创建项目 
-vue create --preset yuezhilunhui2009/vue-cli3-preset-demo --clone preset-demo --bare
+vue create --preset yuezhilunhui2009/vue-cli3-preset-demo preset-demo --bare
 
 # 本地预览
 # 示例链接：http://localhost:8080/simple.html
