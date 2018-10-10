@@ -12,6 +12,7 @@ npm install -g @vue/cli
 vue create --preset  ./vue-cli3-preset-demo/ --clone preset-demo --bare
 
 # 本地预览
+# 示例链接：http://localhost:8080/simple.html
 cd preset-demo && npm run serve
 
 # 构建部署版本
@@ -24,6 +25,7 @@ npm run build
 vue ui
 ```
 
+<!--
 ## 阅读详细工程文档
 ```bash
 # 本地预览
@@ -32,3 +34,15 @@ npm run docs:dev
 # 构建部署版本
 npm run docs:build
 ```
+-->
+
+## TODO
+- [x] 项目目录结构
+- [] postcss 配置
+- [] git-hook 配置
+- [] eslint 配置
+- [] babel 配置
+- [] browserslist 配置
+- [] proxy 配置
+- [] API 层
+- [] simple、verbose 两个示例页面
