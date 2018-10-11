@@ -128,10 +128,14 @@ npm run docs:build
     - [x] cssnano 优化 CSS 尺寸
     - [x] autoprefixer 根据 browserlist 进行前缀补齐
 - [ ] git-hook 配置
-- [ ] eslint 配置
-- [ ] babel 配置
+- [x] eslint 配置
+- [x] babel 配置
 - [x] browserslist 配置
 - [x] proxy 配置
 - [ ] API 层
 - [ ] simple、verbose 两个示例页面
-- [ ] 创建项目子结构命令（vue组件、页面、API、View、mutation、action）
+- [ ] 创建项目子结构命令
+    - [ ] 创建 vue 组件
+    - [ ] 创建新页面
+    - [ ] 添加 API
+    - [ ] 添加新的 View （SPA的一个视图）
