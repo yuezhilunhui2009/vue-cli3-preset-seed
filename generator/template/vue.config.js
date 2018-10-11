@@ -41,15 +41,10 @@ module.exports = {
     transpileDependencies: [],
     productionSourceMap: true,
     pages: generatePagesConfig({ pagesDir: './src/pages/' }),
-    // 以 webpack-merge 形式修改 webpack 配置
-    configureWebpack: config => {
-        if (process.env.NODE_ENV === 'production') {
-            // 生产环境
-        } else {
-            // 开发环境
-        }
-    },
-    // 以 webpack-chain 形式修改 webpack 配置
+    /** 
+     * 链式操作 webpack 选项
+     * 参考：https://github.com/neutrinojs/webpack-chain
+     */
     chainWebpack: config => {
         config.resolve.alias
             .set('@src', path.resolve(__dirname, './src'))
@@ -65,5 +60,17 @@ module.exports = {
         } else {
             // 开发环境
         }
+    },
+    /** 
+     * 本地代理配置
+     * 完整选项：https://github.com/chimurai/http-proxy-middleware#proxycontext-config
+     */
+    devServer: {
+        // proxy: {
+        //     '/api/*': {
+        //         target: 'https://baidu.com',
+        //         changeOrigin: true
+        //     }
+        // }
     }
 }

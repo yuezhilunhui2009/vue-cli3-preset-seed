@@ -130,8 +130,8 @@ npm run docs:build
 - [ ] git-hook 配置
 - [ ] eslint 配置
 - [ ] babel 配置
-- [ ] browserslist 配置
-- [ ] proxy 配置
+- [x] browserslist 配置
+- [x] proxy 配置
 - [ ] API 层
 - [ ] simple、verbose 两个示例页面
 - [ ] 创建项目子结构命令（vue组件、页面、API、View、mutation、action）
