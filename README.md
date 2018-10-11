@@ -120,9 +120,13 @@ npm run docs:build
 ```
 -->
 
-## TODO
+## 特性 & 待确认特性
 - [x] 项目目录结构
-- [ ] postcss 配置
+- [x] CSS 预处理器 less
+- [x] postcss 配置
+    - [x] cssnano 优化 CSS 尺寸
+    - [x] autoprefixer 根据 browserlist 进行前缀补齐
+    - [x] normalize.css 注入
 - [ ] git-hook 配置
 - [ ] eslint 配置
 - [ ] babel 配置

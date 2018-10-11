@@ -13,5 +13,25 @@
       ]
     }
   },
-  "configs": {}
+  "configs": {
+    "postcss": {
+      "plugins": {
+        "postcss-normalize": {
+          "forceImport": true
+        }
+      }
+    },
+    "eslintConfig": {
+      "rules": {
+          "indent": ["error", 4]
+      }
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 8",
+      "android >= 4",
+      "ios >= 8"
+    ]
+  }
 }
