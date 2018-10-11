@@ -15,11 +15,7 @@
   },
   "configs": {
     "postcss": {
-      "plugins": {
-        "postcss-normalize": {
-          "forceImport": true
-        }
-      }
+      "plugins": {}
     },
     "eslintConfig": {
       "rules": {

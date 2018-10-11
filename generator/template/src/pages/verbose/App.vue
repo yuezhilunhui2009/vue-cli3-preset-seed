@@ -1,5 +1,5 @@
 <template>
-    <div>page_with_router_vuex</div>
+    <div>page_verbose: page_with_router_vuex</div>
 </template>
 
 <script>
@@ -40,5 +40,11 @@ export default {
 };
 </script>
 
+<style>
+/* 全局样式 */
+@import '~normalize.css/normalize.css'
+</style>
+
 <style lang="less" scoped>
+/* 局部样式 */
 </style>

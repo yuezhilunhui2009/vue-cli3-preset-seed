@@ -8,10 +8,9 @@ module.exports = (api, options, rootOptions) => {
         dependencies: {
             "vue-router": "^3.0.1",
             "vuex": "^3.0.1",
+            "normalize.css": "^8.0.0"
         },
-        devDependencies: {
-            "postcss-normalize": "^7.0.1"
-        },
+        devDependencies: {},
         scripts: {
             "build-dev": "vue-cli-service build --mode dev",
             "build-test": "vue-cli-service build --mode test",

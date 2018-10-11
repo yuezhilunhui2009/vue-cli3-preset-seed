@@ -40,5 +40,11 @@ export default {
 };
 </script>
 
+<style>
+/* 全局样式 */
+@import '~normalize.css/normalize.css'
+</style>
+
 <style lang="less" scoped>
+/* 局部样式 */
 </style>
