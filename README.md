@@ -120,7 +120,7 @@ npm run docs:build
 ```
 -->
 
-## 特性 & 待确认特性
+## TODO
 - [x] 项目目录结构
 - [x] CSS 预处理器 less
 - [x] normalize.css
