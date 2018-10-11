@@ -129,9 +129,9 @@ npm run docs:build
     - [x] autoprefixer 根据 browserlist 进行前缀补齐
 - [x] babel 配置
 - [x] browserslist 配置
-- [x] proxy 配置
 - [x] eslint 配置
 - [ ] git-hook 配置
+- [ ] proxy 配置
 - [ ] API 层
 - [ ] simple、verbose 两个示例页面
 - [ ] 创建项目子结构命令
