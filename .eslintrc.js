@@ -10,7 +10,7 @@ module.exports = {
     },
     "extends": "standard",
     "rules": {
-        "indent": ["error", 4],
+        "indent": ["error", 2],
         "no-unused-vars": "off"
     }
 }

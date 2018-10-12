@@ -9,9 +9,9 @@ Object.keys(commonFilters).forEach(key => Vue.filter(key, commonFilters[key]))
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    render: h => h(App),
-    template: '<App/>',
-    router,
-    store
+  el: '#app',
+  render: h => h(App),
+  template: '<App/>',
+  router,
+  store
 })

@@ -19,11 +19,11 @@ indent_style = space
 indent_size = 2
 
 # Indentation override for all JS under lib directory
-[generator/**.{js,vue}]
+[src/**.{js,vue}]
 indent_style = space
 indent_size = 2
 
 # Matches the exact files either package.json or .travis.yml
-[{package.json,.travis.yml}]
+[{package.json,vue.config.js}]
 indent_style = space
 indent_size = 2
