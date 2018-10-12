@@ -4,7 +4,7 @@
   "description": "vue-cli preset",
   "main": "./generator/index.js",
   "scripts": {
-    "lint": "eslint --fix ./generator/"
+    "lint": "eslint --fix ./generator/ && eslint ./generator/"
   },
   "repository": {
     "type": "git",
