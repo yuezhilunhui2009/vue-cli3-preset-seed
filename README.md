@@ -2,7 +2,6 @@
 [![Build Status](https://travis-ci.com/yuezhilunhui2009/vue-cli3-preset-demo.svg?branch=master)](https://travis-ci.com/yuezhilunhui2009/vue-cli3-preset-demo)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## 简介
 vue-cli3-preset-demo 是一个 web 前端项目骨架，用于配合 Vue.js 开发标准工具 [Vue CLI 3](https://cli.vuejs.org/zh/) 在创建新项目时使用。
 
 ## 准备工作
