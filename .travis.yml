@@ -1,5 +1,5 @@
 before_install:
-  - sudo npm i -g @vue/cli
+  - npm install -g @vue/cli
 
 language: node_js
 node_js:
