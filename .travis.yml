@@ -1,10 +1,13 @@
+before_install:
+  - sudo npm i -g @vue/cli
+
 language: node_js
 node_js:
   - "8"
+
 jobs:
   include:
     - stage: lint
       script: "npm run lint"
-    - stage: install_master
-      script: "npm i -g @vue/cli"
-      script: "vue create --preset . preset-demo --bare && npm run build"
+    - stage: build_demo
+      script: "vue create --preset . preset-demo --bare && cd preset-demo && npm run build"
