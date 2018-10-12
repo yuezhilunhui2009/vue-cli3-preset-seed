@@ -3,10 +3,10 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## 简介
-vue-cli3-preset-demo 是一个 web 前端项目骨架，只能用于配合 Vue.js 开发标准工具 [Vue CLI 3](https://cli.vuejs.org/zh/) 使用，不能单独运行。
+vue-cli3-preset-demo 是一个 web 前端项目骨架，用于配合 Vue.js 开发标准工具 [Vue CLI 3](https://cli.vuejs.org/zh/) 在创建新项目时使用。
 
 ## 准备工作
-已安装 nodejs v8.11.0+ 与 npm
+确认计算机已安装 [nodejs v8.11.0+](https://nodejs.org/en/download/) 与 npm
 
 ## 快速开始
 ```bash
@@ -18,6 +18,7 @@ vue create --preset yuezhilunhui2009/vue-cli3-preset-demo preset-demo --bare
 
 # 本地预览
 # 示例链接：http://localhost:8080/simple.html
+# 示例链接：http://localhost:8080/verbose.html
 cd preset-demo && npm run serve
 
 # 构建部署版本
@@ -73,13 +74,13 @@ vue ui
 ** 根据需要可选的目录或者文件
 
 ### 业务子结构
-在一些目录下通常是根据业务进行分割的，例如：
+项目中的一些路径通常是根据业务进行分割的，例如：
 
 * src/pages/
 * src/pages/views/
 * src/pages/store/modules/
 
-这些目录下可以根据业务为文件夹命名。
+这些路径下可以根据业务为文件/文件夹命名。
 
 ### 通用结构
 * scripts、assets、styles 文件夹可以根据情况添加，原则是放在里面的文件只有同级或者同级的子级会用到。
