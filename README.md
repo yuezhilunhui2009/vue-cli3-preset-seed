@@ -1,6 +1,6 @@
 # vue-cli3-preset-demo
+[![Build Status](https://travis-ci.com/yuezhilunhui2009/vue-cli3-preset-demo.svg?branch=master)](https://travis-ci.com/yuezhilunhui2009/vue-cli3-preset-demo)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 
 ## 准备工作
 已安装 nodejs v8.11.0+ 与 npm

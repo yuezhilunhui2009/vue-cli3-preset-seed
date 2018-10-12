@@ -6,15 +6,15 @@ module.exports = (api, options, rootOptions) => {
     // 修改 `package.json` 里的字段
     api.extendPackage({
         dependencies: {
-            "vue-router": "^3.0.1",
-            "vuex": "^3.0.1",
-            "normalize.css": "^8.0.0"
+            'vue-router': '^3.0.1',
+            'vuex': '^3.0.1',
+            'normalize.css': '^8.0.0'
         },
         devDependencies: {},
         scripts: {
-            "build-dev": "vue-cli-service build --mode dev",
-            "build-test": "vue-cli-service build --mode test",
-            "build": "vue-cli-service build --mode prod"
+            'build-dev': 'vue-cli-service build --mode dev',
+            'build-test': 'vue-cli-service build --mode test',
+            'build': 'vue-cli-service build --mode prod'
         }
     })
 

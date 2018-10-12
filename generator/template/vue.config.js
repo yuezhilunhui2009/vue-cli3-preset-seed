@@ -41,7 +41,7 @@ module.exports = {
     transpileDependencies: [],
     productionSourceMap: true,
     pages: generatePagesConfig({ pagesDir: './src/pages/' }),
-    /** 
+    /**
      * 链式操作 webpack 选项
      * 参考：https://github.com/neutrinojs/webpack-chain
      */
@@ -61,7 +61,7 @@ module.exports = {
             // 开发环境
         }
     },
-    /** 
+    /**
      * 本地代理配置
      * 完整选项：https://github.com/chimurai/http-proxy-middleware#proxycontext-config
      */
