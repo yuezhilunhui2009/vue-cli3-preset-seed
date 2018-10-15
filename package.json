@@ -37,10 +37,7 @@
     },
     "ghooks": {
       "pre-commit": "npm run lint",
-      "commit-msg": "validate-commit-msg",
-      "pre-push": "make test",
-      "post-merge": "npm install",
-      "post-rewrite": "npm install"
+      "commit-msg": "validate-commit-msg"
     }
   }
 }
