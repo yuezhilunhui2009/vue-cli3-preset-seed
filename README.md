@@ -140,8 +140,9 @@ npm run docs:build
 
 2018/10/15 ~ 2018/10/19
 
-- [x] commitizen、cz-conventional-changelog、validate-commit-msg 配置，支持提交标准化
-- [x] git-hook 配置，强制提交前 eslint、commit validate
+- [x] commitizen、cz-conventional-changelog 配置，辅助生成标准提交格式
+- [x] commitlint、@commitlint/config-conventional 配置，检验提交信息格式
+- [x] git-hook 配置，强制 git 提交前执行 eslint、commitlint
 - [ ] API 层
 - [ ] proxy 配置
 - [ ] 环境变量配置
