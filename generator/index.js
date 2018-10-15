@@ -11,7 +11,6 @@ module.exports = (api, options, rootOptions) => {
       'normalize.css': '^8.0.0',
       'commitizen': '^3.0.2',
       'cz-conventional-changelog': '^2.1.0',
-      'ghooks': '^2.0.4',
       'validate-commit-msg': '^2.14.0'
     },
     devDependencies: {},
@@ -23,11 +22,10 @@ module.exports = (api, options, rootOptions) => {
     config: {
       'commitizen': {
         'path': './node_modules/cz-conventional-changelog'
-      },
-      'ghooks': {
-        'pre-commit': 'npm run lint',
-        'commit-msg': 'validate-commit-msg'
       }
+    },
+    gitHooks: {
+      'commit-msg': 'validate-commit-msg'
     }
   })
 
