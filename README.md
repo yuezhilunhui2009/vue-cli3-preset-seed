@@ -126,6 +126,8 @@ npm run docs:build
 -->
 
 ## TODO
+2018/10/8 ~ 2018/10/12
+
 - [x] 项目目录结构
 - [x] CSS 预处理器 less
 - [x] normalize.css
@@ -135,10 +137,17 @@ npm run docs:build
 - [x] babel 配置
 - [x] browserslist 配置
 - [x] eslint 配置
+
+2018/10/15 ~ 2018/10/19
+
+- [ ] commitizen、cz-conventional-changelog 配置
 - [ ] git-hook 配置
 - [ ] proxy 配置
 - [ ] API 层
 - [ ] simple、verbose 两个示例页面
+
+2018/10/22 ~ 2018/10/26
+
 - [ ] 创建项目子结构命令
     - [ ] 创建 vue 组件
     - [ ] 创建新页面
