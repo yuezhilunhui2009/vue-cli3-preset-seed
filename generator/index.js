@@ -8,12 +8,14 @@ module.exports = (api, options, rootOptions) => {
     dependencies: {
       'vue-router': '^3.0.1',
       'vuex': '^3.0.1',
-      'normalize.css': '^8.0.0',
+      'normalize.css': '^8.0.0'
+    },
+    devDependencies: {
       'commitizen': '^3.0.2',
       'cz-conventional-changelog': '^2.1.0',
-      'validate-commit-msg': '^2.14.0'
+      '@commitlint/cli': '^7.2.1',
+      '@commitlint/config-conventional': '^7.1.2'
     },
-    devDependencies: {},
     scripts: {
       'build-dev': 'vue-cli-service build --mode dev',
       'build-test': 'vue-cli-service build --mode test',
@@ -25,7 +27,10 @@ module.exports = (api, options, rootOptions) => {
       }
     },
     gitHooks: {
-      'commit-msg': 'validate-commit-msg'
+      'commit-msg': 'commitlint -e'
+    },
+    commitlint: {
+      'extends': ['@commitlint/config-conventional']
     }
   })
 
