@@ -140,7 +140,7 @@ npm run docs:build
 
 2018/10/15 ~ 2018/10/19
 
-- [ ] commitizen、cz-conventional-changelog 配置
+- [ ] commitizen、cz-conventional-changelog、validate-commit-msg 配置
 - [ ] git-hook 配置
 - [ ] proxy 配置
 - [ ] API 层
