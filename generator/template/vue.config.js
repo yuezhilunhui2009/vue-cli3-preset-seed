@@ -47,7 +47,7 @@ module.exports = {
      */
   chainWebpack: config => {
     config.resolve.alias
-      .set('@src', path.resolve(__dirname, './src'))
+      .set('@', path.resolve(__dirname, './src'))
       .set('@apis', path.resolve(__dirname, './src/apis'))
       .set('@assets', path.resolve(__dirname, './src/assets'))
       .set('@comps', path.resolve(__dirname, './src/components'))
