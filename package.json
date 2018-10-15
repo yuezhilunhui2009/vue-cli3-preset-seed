@@ -29,7 +29,8 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "ghooks": "^2.0.4",
-    "validate-commit-msg": "^2.14.0"
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2"
   },
   "config": {
     "commitizen": {
@@ -37,7 +38,7 @@
     },
     "ghooks": {
       "pre-commit": "npm run lint",
-      "commit-msg": "validate-commit-msg"
+      "commit-msg": "commitlint -e"
     }
   }
 }
