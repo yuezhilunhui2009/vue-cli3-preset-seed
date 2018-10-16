@@ -1,4 +1,4 @@
-# vue-cli3 的一些技巧
+# vue-cli3 问题记录
 
 ## 问题：如何从任意 git 仓库获取 remote preset 初始化项目？
 
@@ -22,4 +22,4 @@ vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-s
 3. 最终看到 vue-cli3 使用了 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 这个 npm 包；
 4. 回头看看 vue create --preset &lt;url/gitRepoName&gt; 命令参数的传递过程发现 url 是透传到 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 的；
 5. 根据 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 文档我们直接使用 Direct + clone 模式；
-6. 反应到 vue create --preset 这边就是 vue create --preset direct:&lt;git url&gt; &lt;projectName&gt; --clone
+6. 反映到 vue create --preset 这边就是 vue create --preset direct:&lt;git url&gt; &lt;projectName&gt; --clone
