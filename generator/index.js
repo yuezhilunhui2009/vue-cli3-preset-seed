@@ -70,13 +70,17 @@ module.exports = (api, options, rootOptions) => {
   // eslint
   api.extendPackage({
     eslintConfig: {
+      rules: {
+        indent: [
+          'error',
+          2
+        ]
+      },
       overrides: [
         {
+          files: ['*.vue'],
           rules: {
-            'indent': ['error', 2],
-            'vue/script-indent': ['error', 2, {
-              baseIndent: 1
-            }]
+            'vue/script-indent': ['error', 2]
           }
         }
       ]
