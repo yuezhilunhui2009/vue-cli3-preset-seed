@@ -1,10 +1,10 @@
 # vue-cli3 的一些技巧
 
 ## 问题：如何从任意 git 仓库获取 remote preset 初始化项目？
-
+
 ### 背景
 * 截止 2018/10/16 官方文档关于获取远程 preset 说明包含 github、gitlab、bitbucket 三个云仓库；
-* 尝试直接在 --preset 后填写完整 url 直接报 404 或 auth 相关错误；
+* 尝试直接在 --preset 后填写完整 url 直接报 404 或 auth 相关错误；
 * 添加 --clone 参数后报 'git clone' failed with status 128 错误；
 
 ### 解决方案
