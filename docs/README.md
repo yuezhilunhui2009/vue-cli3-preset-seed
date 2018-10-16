@@ -17,7 +17,8 @@ vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-s
 
 ### 解决过程
 1. 打开全局 node_modules/@vue/cli 扫一眼目录结构，从 bin 目录找到 vue create --preset 入口；
-2. 根据入口代码发现调用链 bin/vue -> lib/create -> lib/Creator -> util/loadRemotePreset -> [download-git-repo](https://www.npmjs.com/package/download-git-repo)；
+2. 根据入口代码发现调用链 [bin/vue](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli/bin/vue.js) -> [lib/create](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli/lib/create.js) -> [lib/Creator](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli/lib/Creator.js) -> [util/loadRemotePreset](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli/lib/util/loadRemotePreset.js) -> [download-git-repo](https://www.npmjs.com/package/download-git-repo)；
+
 3. 最终看到 vue-cli3 使用了 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 这个 npm 包；
 4. 回头看看 vue create --preset <url/gitRepoName> 命令参数的传递过程发现 url 是透传到 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 的；
 5. 根据 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 文档我们直接使用 Direct + clone 模式；
