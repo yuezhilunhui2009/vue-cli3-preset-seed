@@ -130,7 +130,6 @@ npm run docs:build
 
 - [x] 项目目录结构
 - [x] CSS 预处理器 less
-- [x] normalize.css
 - [x] postcss 配置
     - [x] cssnano 优化 CSS 尺寸
     - [x] autoprefixer 根据 browserlist 进行前缀补齐
@@ -143,8 +142,9 @@ npm run docs:build
 - [x] commitizen、cz-conventional-changelog 配置，辅助生成标准提交格式
 - [x] commitlint、@commitlint/config-conventional 配置，检验提交信息格式
 - [x] git-hook 配置，强制 git 提交前执行 eslint、commitlint
+- [ ] 自动 @import variables.less
 - [ ] API 层
-- [ ] proxy 配置
+- [x] proxy 配置
 - [ ] 环境变量配置
 - [ ] simple、verbose 两个示例页面
 

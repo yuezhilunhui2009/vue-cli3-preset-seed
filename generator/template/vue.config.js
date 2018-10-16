@@ -33,6 +33,20 @@ const generatePagesConfig = ({ pagesDir, customConfig = {} }) => {
   }
 }
 
+/**
+ * 样式预处理全局变量
+ * @param {string} rule webpack 规则
+ */
+const addStyleResource = (rule) => {
+  rule.use('style-resource')
+    .loader('style-resources-loader')
+    .options({
+      patterns: [
+        path.resolve(__dirname, '@styles/variables.less')
+      ]
+    })
+}
+
 module.exports = {
   baseUrl: process.env.NODE_ENV === 'production' ? 'http://cdn_static_root/' : '/',
   outputDir: 'dist',
@@ -41,11 +55,8 @@ module.exports = {
   transpileDependencies: [],
   productionSourceMap: true,
   pages: generatePagesConfig({ pagesDir: './src/pages/' }),
-  /**
-     * 链式操作 webpack 选项
-     * 参考：https://github.com/neutrinojs/webpack-chain
-     */
   chainWebpack: config => {
+    // 路径别名
     config.resolve.alias
       .set('@', path.resolve(__dirname, './src'))
       .set('@apis', path.resolve(__dirname, './src/apis'))
@@ -55,22 +66,20 @@ module.exports = {
       .set('@scripts', path.resolve(__dirname, './src/scripts'))
       .set('@styles', path.resolve(__dirname, './src/styles'))
 
-    if (process.env.NODE_ENV === 'production') {
-      // 生产环境
-    } else {
-      // 开发环境
-    }
+    // 添加样式预处理全局变量插件
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)))
   },
   /**
-     * 本地代理配置
-     * 完整选项：https://github.com/chimurai/http-proxy-middleware#proxycontext-config
-     */
+   * 本地代理配置
+   * 完整选项：https://github.com/chimurai/http-proxy-middleware#proxycontext-config
+   */
   devServer: {
-    // proxy: {
-    //     '/api/*': {
-    //         target: 'https://baidu.com',
-    //         changeOrigin: true
-    //     }
-    // }
+    proxy: {
+      // '/api/*': {
+      //   target: 'https://baidu.com',
+      //   changeOrigin: true
+      // }
+    }
   }
 }
