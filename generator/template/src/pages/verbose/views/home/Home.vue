@@ -1,8 +1,14 @@
 <template>
-  <div>Home view</div>
+  <div class="home-view">
+    Home view
+    <div>nickname: {{ user.nickname }}</div>
+    <img :src="user.headimgurl">
+  </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: '',
   components: {},
@@ -10,7 +16,11 @@ export default {
   data () {
     return {}
   },
-  computed: {},
+  computed: {
+    ...mapState({
+      user: state => state.user
+    })
+  },
   watch: {},
   beforeCreate () {
     // now --> data observer --> event / watcher
@@ -41,4 +51,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.home-view {
+
+}
 </style>

@@ -18,21 +18,18 @@ export default {
       state.fetching = true
     },
     [FETCH_USER_SUCCESS] (state, payload) {
-      state = {
-        ...state,
-        ...payload,
-        inited: true,
-        fetching: false
-      }
+      const { nickname, headimgurl } = payload
 
-      console.log('state', { ...state })
+      state.nickname = nickname
+      state.headimgurl = headimgurl
+      state.inited = true
+      state.fetching = false
     },
     [FETCH_USER_FAILURE] (state, payload) {
-      state = {
-        ...state,
-        ...payload,
-        fetching: false
-      }
+      const { code, msg } = payload
+      state.code = code
+      state.msg = msg
+      state.fetching = false
     }
   },
   actions: {

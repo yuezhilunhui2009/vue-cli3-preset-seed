@@ -1,22 +1,31 @@
 <template>
-  <div>page_verbose: page_with_router_vuex</div>
+  <div id="app">
+    <Header />
+    <h1>Hello App!</h1>
+    <p>
+      <router-link to="/home">Go to Home</router-link>
+      <router-link to="/about">Go to About</router-link>
+    </p>
+    <router-view></router-view>
+    <Footer />
+  </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import Header from '@comps/Header'
+import Footer from '@comps/Footer'
 
 export default {
   name: '',
-  components: {},
+  components: {
+    Header,
+    Footer
+  },
   props: {},
   data () {
     return {}
   },
-  computed: {
-    ...mapState({
-      user: state => state.user
-    })
-  },
+  computed: {},
   watch: {},
   beforeCreate () {
     // now --> data observer --> event / watcher
@@ -54,4 +63,16 @@ export default {
 
 <style lang="less" scoped>
 /* 局部样式 */
+#app {
+  text-align: center;
+
+  h1 {
+    color: @vue-font-green;
+  }
+
+  p {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 </style>

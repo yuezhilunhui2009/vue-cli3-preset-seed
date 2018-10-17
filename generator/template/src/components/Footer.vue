@@ -1,5 +1,5 @@
 <template>
-  <div>CompsA</div>
+  <footer></footer>
 </template>
 
 <script>
@@ -41,4 +41,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
+footer {
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  background-color: @font-light;
+}
 </style>

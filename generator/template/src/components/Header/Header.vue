@@ -1,5 +1,6 @@
 <template>
-  <header class="header"/>
+  <header>
+  </header>
 </template>
 
 <script>
@@ -41,7 +42,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.header {
-
+header {
+  height: 100px;
+  background-color: @vue-bg-green;
 }
 </style>

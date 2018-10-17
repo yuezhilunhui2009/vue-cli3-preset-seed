@@ -48,7 +48,5 @@ export default {
 <style lang="less" scoped>
 /* 局部样式 */
 /* 自动注入 variables.less */
-div {
-  background-color: @nice-blue;
-}
+
 </style>
