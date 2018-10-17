@@ -5,22 +5,11 @@
   "cssPreprocessor": "less",
   "plugins": {
     "@vue/cli-plugin-babel": {},
-    "@vue/cli-plugin-eslint": {
-      "config": "standard",
-      "lintOn": [
-        "save",
-        "commit"
-      ]
-    }
+    "@vue/cli-plugin-eslint": {}
   },
   "configs": {
     "postcss": {
       "plugins": {}
-    },
-    "eslintConfig": {
-      "rules": {
-          "indent": ["error", 4]
-      }
     },
     "browserslist": [
       "> 1%",

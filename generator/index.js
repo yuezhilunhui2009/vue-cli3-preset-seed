@@ -37,6 +37,26 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
+  // eslint
+  api.extendPackage({
+    devDependencies: {
+      '@vue/eslint-config-standard': '^3.0.5'
+    }
+  })
+
+  api.extendPackage({
+    eslintConfig: {
+      rules: {
+        'indent': ['error', 2],
+        'vue/script-indent': ['error', 2]
+      },
+      extends: [
+        'plugin:vue/essential',
+        '@vue/standard'
+      ]
+    }
+  })
+
   // commitizen - 协助开发者提交标准的 git message
   api.extendPackage({
     devDependencies: {
@@ -64,26 +84,6 @@ module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     gitHooks: {
       'commit-msg': 'commitlint -e'
-    }
-  })
-
-  // eslint
-  api.extendPackage({
-    eslintConfig: {
-      rules: {
-        indent: [
-          'error',
-          2
-        ]
-      },
-      overrides: [
-        {
-          files: ['*.vue'],
-          rules: {
-            'vue/script-indent': ['error', 2]
-          }
-        }
-      ]
     }
   })
 
