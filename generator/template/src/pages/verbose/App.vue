@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: '',
   components: {},
@@ -10,7 +12,11 @@ export default {
   data () {
     return {}
   },
-  computed: {},
+  computed: {
+    ...mapState({
+      user: state => state.user
+    })
+  },
   watch: {},
   beforeCreate () {
     // now --> data observer --> event / watcher
@@ -23,6 +29,7 @@ export default {
   },
   mounted () {
     // vm.$el ready
+    this.$store.dispatch('fetchUser')
   },
   beforeUpdate () {
     // when data change

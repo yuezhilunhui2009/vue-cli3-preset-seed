@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-Vue.use(Vuex)
+import generateStore from '@store'
+import actions from './actions'
+import mutations from './mutations'
 
-const store = new Vuex.Store({
-  // ...
-  // strict: process.env.NODE_ENV !== 'production'
+const store = generateStore({
+  actions,
+  mutations
 })
 
 export default store

@@ -13,7 +13,7 @@ vue-cli3-preset-seed 是一个 web 前端项目骨架，用于配合 Vue.js 开�
 npm install -g @vue/cli
 
 # 根据远程 preset 创建项目 
-vue create --preset yuezhilunhui2009/vue-cli3-preset-seed preset-seed-demo --bare
+vue create --preset yuezhilunhui2009/vue-cli3-preset-seed preset-seed-demo
 
 # 本地预览
 # 示例链接：http://localhost:8080/simple.html
@@ -50,21 +50,21 @@ vue ui
     │       ├── components          # 页面级公共组件
     │       ├── router              # 路由
     │       ├── scripts             # 页面级公共脚本
-    │       ├── store               # 状态仓库
-    │       │   ├── modules**       # 按业务拆分的 store
-    │       │   ├── plugins**       # Vuex 插件
-    │       │   ├── actions.js      # Vuex 的 Action
-    │       │   ├── mutations.js    # Vuex 的 Mutation
-    │       │   └── index.js        # store 入口文件
+    │       ├── store               # 页面 store
+    │       │   ├── actions.js      # 页面 Actions
+    │       │   ├── mutations.js    # 页面 Mutations
+    │       │   └── index.js        # 页面 store 入口文件
     │       ├── views**             # SPA 的各个视图
     │       │   ├── about           # 示例视图
     │       │   └── home            # 示例视图
     │       ├── App.vue             # 必须，页面根组件
     │       ├── index.js            # 必须，页面入口文件
     │       └── index.html          # 必须，页面模板文件
+    ├── store                       # 项目级公共 store，提供生成 store 函数
+    │   └── modules                 # 项目级公共 store 子模块
     ├── scripts                     # 项目级公共脚本
-    │   ├── directives**            # vue 指令
-    │   └── filters**               # vue 过滤器
+    │   ├── directives**            # vue 自定义指令
+    │   └── filters**               # vue 自定义过滤器
     └── styles                      # 项目级公共样式
 ```
 
@@ -75,6 +75,8 @@ vue ui
 ### 业务子结构
 项目中的一些路径通常是根据业务进行分割的，例如：
 
+* src/apis/
+* src/store/modules/
 * src/pages/
 * src/pages/views/
 * src/pages/store/modules/

@@ -60,6 +60,7 @@ module.exports = {
     config.resolve.alias
       .set('@', path.resolve(__dirname, './src'))
       .set('@apis', path.resolve(__dirname, './src/apis'))
+      .set('@store', path.resolve(__dirname, './src/store'))
       .set('@assets', path.resolve(__dirname, './src/assets'))
       .set('@comps', path.resolve(__dirname, './src/components'))
       .set('@pages', path.resolve(__dirname, './src/pages'))
