@@ -36,7 +36,7 @@ vue ui
 
 ```bash
 ├── docs                            # 项目文档
-├── public                          # 公开静态文件（未被代码引用）
+├── dist                            # 输出目录
 └── src                             # 源代码
     ├── apis                        # 数据 API 层
     ├── assets                      # 项目级公共资产文件
@@ -65,7 +65,7 @@ vue ui
     ├── scripts                     # 项目级公共脚本
     │   ├── directives**            # vue 指令
     │   └── filters**               # vue 过滤器
-    └── styles
+    └── styles                      # 项目级公共样式
 ```
 
 ## 项目子结构说明
@@ -142,7 +142,7 @@ npm run docs:build
 - [x] commitizen、cz-conventional-changelog 配置，辅助生成标准提交格式
 - [x] commitlint、@commitlint/config-conventional 配置，检验提交信息格式
 - [x] git-hook 配置，强制 git 提交前执行 eslint、commitlint
-- [ ] 自动 @import variables.less
+- [x] 自动 @import variables.less
 - [ ] API 层
 - [x] proxy 配置
 - [ ] 环境变量配置

@@ -23,3 +23,15 @@ vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-s
 4. 回头看看 vue create --preset &lt;url/gitRepoName&gt; 命令参数的传递过程发现 url 是透传到 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 的；
 5. 根据 [download-git-repo](https://www.npmjs.com/package/download-git-repo) 文档我们直接使用 Direct + clone 模式；
 6. 反映到 vue create --preset 这边就是 vue create --preset direct:&lt;git url&gt; &lt;projectName&gt; --clone
+
+## 问题：preset 项目如何配置 eslint ？
+
+### 背景
+* preset 项目可以在 preset.json 中配置 eslint 插件，例如：@vue/cli-plugin-eslint；
+* preset 项目可以在 generator/index.js 中配置 eslint 相关依赖及配置；
+* 两种配置是否会冲突，比较晕；
+
+### 结论
+* preset.json 中添加 @vue/cli-plugin-eslint 这个插件带来的是 eslint 整套配置，包含依赖、rule、githook；
+* generator/index.js 中配置 eslint 主要通过自己改写 package.json 以及 eslintConfig 内容来配置 eslint，每一处都需要自己写；
+* preset.json 与 generator/index.js 的配置可能会产生冲突，例如对 eslintConfig rules 进行配置，如果配置项是数组，那么最终创建的项目里此项会合并两处配置，导致配置错误；

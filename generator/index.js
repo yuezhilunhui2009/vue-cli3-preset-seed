@@ -21,14 +21,10 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
-  // less
-  api.extendPackage({
-    devDependencies: {
-      'style-resources-loader': '1.2.1',
-      'less': '^3.0.4',
-      'less-loader': '^4.1.0'
-    }
-  })
+  // css 预处理 - less
+  // 在 preset.json cssPreprocessor 配置
+  // 会自动添加 less、less-loader 依赖
+  // 自动配置 loader
 
   // 自动导入
   api.extendPackage({
@@ -38,22 +34,16 @@ module.exports = (api, options, rootOptions) => {
   })
 
   // eslint
-  api.extendPackage({
-    devDependencies: {
-      '@vue/eslint-config-standard': '^3.0.5'
-    }
-  })
-
+  // 有一些功能在 preset.json 中配置，例如：
+  // package.json devDependencies 包含 "@vue/eslint-config-standard"
+  // .eslintrc extends 包含 "@vue/standard"
+  // package.json gitHooks 包含 "pre-commit": "lint-staged"
   api.extendPackage({
     eslintConfig: {
       rules: {
         'indent': ['error', 2],
         'vue/script-indent': ['error', 2]
-      },
-      extends: [
-        'plugin:vue/essential',
-        '@vue/standard'
-      ]
+      }
     }
   })
 

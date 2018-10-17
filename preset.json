@@ -1,11 +1,17 @@
 {
-  "useConfigFiles": true,
+  "useConfigFiles": false,
   "router": false,
   "vuex": false,
   "cssPreprocessor": "less",
   "plugins": {
     "@vue/cli-plugin-babel": {},
-    "@vue/cli-plugin-eslint": {}
+    "@vue/cli-plugin-eslint": {
+      "config": "standard",
+      "lintOn": [
+        "save",
+        "commit"
+      ]
+    }
   },
   "configs": {
     "postcss": {

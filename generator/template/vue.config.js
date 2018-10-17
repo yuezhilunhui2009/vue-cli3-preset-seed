@@ -42,7 +42,7 @@ const addStyleResource = (rule) => {
     .loader('style-resources-loader')
     .options({
       patterns: [
-        path.resolve(__dirname, '@styles/variables.less')
+        path.resolve(__dirname, './src/styles/variables.less')
       ]
     })
 }
