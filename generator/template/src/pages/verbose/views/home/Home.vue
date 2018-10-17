@@ -1,8 +1,10 @@
 <template>
   <div class="home-view">
-    Home view
-    <div>nickname: {{ user.nickname }}</div>
-    <img :src="user.headimgurl">
+    <h2>Home view</h2>
+    <p v-show="user.fetching">loading...</p>
+    <p v-show="showError">加载失败，<a @click="loadUser" src="javascript:;">点击重试</a></p>
+    <div v-show="user.nickname">昵称: {{ user.nickname }}</div>
+    <img :src="user.headimgurl" v-show="user.headimgurl">
   </div>
 </template>
 
@@ -17,6 +19,10 @@ export default {
     return {}
   },
   computed: {
+    showError () {
+      return this.user.fetching === false && 
+        this.user.code !== 0
+    },
     ...mapState({
       user: state => state.user
     })
@@ -27,6 +33,7 @@ export default {
   },
   created () {
     // data observer --> event / watcher --> now --> compile template
+    this.loadUser()
   },
   beforeMount () {
     // compile template --> now --> mounted
@@ -46,12 +53,26 @@ export default {
   destroyed () {
     //
   },
-  methods: {}
+  methods: {
+    loadUser () {
+      this.$store.dispatch('fetchUser')
+    }
+  }
 }
 </script>
 
 <style lang="less" scoped>
 .home-view {
+  img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    border: solid 10px #eee;
+  }
 
+  a {
+    text-decoration: underline;
+  }
 }
 </style>

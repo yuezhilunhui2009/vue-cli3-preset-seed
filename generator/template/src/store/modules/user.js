@@ -18,10 +18,11 @@ export default {
       state.fetching = true
     },
     [FETCH_USER_SUCCESS] (state, payload) {
-      const { nickname, headimgurl } = payload
+      const { nickname, headimgurl, code } = payload
 
       state.nickname = nickname
       state.headimgurl = headimgurl
+      state.code = code
       state.inited = true
       state.fetching = false
     },
@@ -39,7 +40,7 @@ export default {
         .fetchInfo()
         .then(({ data, code, msg }) => {
           if (code === 0 && data) {
-            commit(FETCH_USER_SUCCESS, { ...data })
+            commit(FETCH_USER_SUCCESS, { ...data, code })
           } else {
             commit(FETCH_USER_FAILURE, { code, msg })
           }

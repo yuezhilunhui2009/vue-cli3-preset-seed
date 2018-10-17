@@ -44,7 +44,7 @@ export default {
 footer {
   position: fixed;
   width: 100%;
-  height: 150px;
+  height: 50px;
   bottom: 0;
   background-color: @font-light;
 }

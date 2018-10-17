@@ -1,5 +1,8 @@
 <template>
-  <div>About view</div>
+  <div>
+    <h2>About view</h2>
+    <p>主人很懒，什么都没有留下</p>
+  </div>
 </template>
 
 <script>
