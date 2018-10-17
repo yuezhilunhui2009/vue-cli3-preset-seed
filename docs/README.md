@@ -12,7 +12,7 @@
 # 关键点：
 # 1. 在 git 仓库 url 前添加 "direct:"
 # 2. 添加 --clone 参数
-vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-seed.git preset-seed-demo --bare --clone
+vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-seed.git preset-seed-demo --clone
 ```
 
 ### 解决过程
@@ -35,3 +35,30 @@ vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-s
 * preset.json 中添加 @vue/cli-plugin-eslint 这个插件带来的是 eslint 整套配置，包含依赖、rule、githook；
 * generator/index.js 中配置 eslint 主要通过自己改写 package.json 以及 eslintConfig 内容来配置 eslint，每一处都需要自己写；
 * preset.json 与 generator/index.js 的配置可能会产生冲突，例如对 eslintConfig rules 进行配置，如果配置项是数组，那么最终创建的项目里此项会合并两处配置，导致配置错误；
+
+## 问题：browserlist 有什么作用，如何正确配置 browserlist ？
+
+### 背景
+* 在使用多种项目脚手架都看到过 browserlist，经常看到这样的默认配置：
+```
+last 1 version
+> 1%
+```
+
+### 结论
+* browserlist 作用于以下工具：
+    * Autoprefixer
+    * Babel
+    * postcss-preset-env
+    * eslint-plugin-compat
+    * stylelint-no-unsupported-browser-features
+    * postcss-normalize
+* 可以使上面列表中的工具针对特定版本区间的浏览器生成对应的兼容性代码；
+* [vue-cli3 中有 @babel/preset-env 和 Autoprefixer 会用到 browserlist 配置](https://cli.vuejs.org/zh/guide/browser-compatibility.html#browserslist)；
+* browserlist 配置参考：
+    * [https://github.com/browserslist/browserslist](https://github.com/browserslist/browserslist)
+* 与 browserlist 配合的工具配置参考：
+    * [https://github.com/browserslist/browserslist-example](https://github.com/browserslist/browserslist-example)
+* 一个在线工具，用于查看 browserlist 配置文件匹配到哪些浏览器：
+    * [https://browserl.ist/?q=defaults](https://browserl.ist/?q=defaults)
+* 注意：并不是项目中所有依赖都支持低版本浏览器，例如 vue 本身不支持低于 IE9 的浏览器；
