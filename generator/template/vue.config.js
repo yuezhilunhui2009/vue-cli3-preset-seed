@@ -76,11 +76,11 @@ module.exports = {
    * 完整选项：https://github.com/chimurai/http-proxy-middleware#proxycontext-config
    */
   devServer: {
-    proxy: {
-      // '/api/*': {
-      //   target: 'https://baidu.com',
-      //   changeOrigin: true
-      // }
-    }
+    // proxy: {
+    //   '/api/*': {
+    //     target: 'https://baidu.com',
+    //     changeOrigin: true
+    //   }
+    // }
   }
 }
