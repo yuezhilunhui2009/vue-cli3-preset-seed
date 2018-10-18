@@ -59,10 +59,10 @@ last 1 version
 ## 问题：如何删除 vue-cli3 创建的默认目录或文件 ？
 ### 背景
 * 自己编写的 preset 有一套自定义目录结构，但是 vue-cli3 创建项目后总会有一些默认结构：
-* /public
-* /src/main.js
-* /src/App.vue
-* /src/components/HelloWorld.vue
+    /public
+    /src/main.js
+    /src/App.vue
+    /src/components/HelloWorld.vue
 ### 结论
 * 在 /generator/index.js 中利用 [GeneratorAPI](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli/lib/GeneratorAPI.js) 进行目录文件编辑：
 ```js
