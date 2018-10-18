@@ -33,13 +33,13 @@ export default {
   },
   created () {
     // data observer --> event / watcher --> now --> compile template
-    this.loadUser()
   },
   beforeMount () {
     // compile template --> now --> mounted
   },
   mounted () {
     // vm.$el ready
+    this.loadUser()
   },
   beforeUpdate () {
     // when data change

@@ -7,7 +7,9 @@
       <router-link to="/about">Go to About</router-link>
     </p>
     <p>路径：{{ this.$route.path }}</p>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
     <Footer />
   </div>
 </template>

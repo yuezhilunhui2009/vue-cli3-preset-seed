@@ -148,7 +148,7 @@ npm run docs:build
 - [ ] API 层
 - [x] proxy 配置
 - [ ] 环境变量配置
-- [ ] vuex、vue-router 示例
+- [x] vuex、vue-router 示例
 - [ ] simple、verbose 两个示例页面
 
 2018/10/22 ~ 2018/10/26

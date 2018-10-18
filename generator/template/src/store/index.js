@@ -8,11 +8,12 @@ Vue.use(Vuex)
 
 /**
  * 创建 store 函数
- * @param {object} state     - 页面的 state
- * @param {object} getters   - 页面的 getter
- * @param {object} mutations - 页面的 mutaions
- * @param {object} action    - 页面的 actions
- * @param {object} modules   - 页面的 modules
+ * @param {object} obj
+ * @param {object} obj.state     - 页面的 state
+ * @param {object} obj.getters   - 页面的 getter
+ * @param {object} obj.mutations - 页面的 mutaions
+ * @param {object} obj.action    - 页面的 actions
+ * @param {object} obj.modules   - 页面的 modules
  */
 const generateStore = ({
   state,
