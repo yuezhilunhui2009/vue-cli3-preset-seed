@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     showError () {
-      return this.user.fetching === false && 
+      return this.user.fetching === false &&
         this.user.code !== 0
     },
     ...mapState({
