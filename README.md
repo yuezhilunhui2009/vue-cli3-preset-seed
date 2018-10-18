@@ -22,6 +22,9 @@ cd preset-seed-demo && npm run serve
 
 # 构建部署版本
 npm run build
+
+# 代码提交
+git-cz
 ```
 
 ## 使用 GUI 管理项目
