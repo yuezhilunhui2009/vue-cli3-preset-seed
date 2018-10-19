@@ -22,17 +22,31 @@ vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-s
 # 示例链接：http://localhost:8080/verbose.html
 cd preset-seed-demo && npm run serve
 
+# 构建测试版本
+npm run build:test
+
 # 构建部署版本
-npm run build
+npm run build:prod
 
 # 代码提交
 git-cz
 ```
 
-## 使用 GUI 管理项目
+## 环境变量
+* dev 模式
 ```bash
-# 在项目的上一级目录执行
-vue ui
+NODE_ENV=development
+VUE_APP_BUILD_MODE=DEV
+```
+* test 模式
+```bash
+NODE_ENV=production
+VUE_APP_BUILD_MODE=TEST
+```
+* prod 模式
+```bash
+NODE_ENV=production
+VUE_APP_BUILD_MODE=PROD
 ```
 
 ## 项目结构
@@ -61,7 +75,7 @@ vue ui
     │       │   ├── mutations.js    # 页面 Mutations
     │       │   └── index.js        # 页面 store 入口文件
     │       ├── views**             # SPA 的各个视图
-    │       │   ├── about           # 示例视图
+    │       │   ├── article-list    # 示例视图
     │       │   └── home            # 示例视图
     │       ├── App.vue             # 必须，页面根组件
     │       ├── index.js            # 必须，页面入口文件
