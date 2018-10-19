@@ -56,6 +56,7 @@ vue ui
     │       ├── router              # 路由
     │       ├── scripts             # 页面级公共脚本
     │       ├── store               # 页面 store
+    │       │   ├── modules         # 页面 store 子模块
     │       │   ├── actions.js      # 页面 Actions
     │       │   ├── mutations.js    # 页面 Mutations
     │       │   └── index.js        # 页面 store 入口文件

@@ -1,5 +1,1 @@
-import aricle from './modules/article'
-
-export default {
-  ...aricle.actions
-}
+export default {}
