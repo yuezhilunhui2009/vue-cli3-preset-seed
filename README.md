@@ -152,7 +152,7 @@ npm run docs:build
 - [x] 自动 @import variables.less
 - [ ] API 层
 - [x] proxy 配置
-- [ ] 环境变量配置
+- [x] 环境变量配置
 - [x] vuex、vue-router 示例
 - [x] simple、verbose 两个示例页面
 

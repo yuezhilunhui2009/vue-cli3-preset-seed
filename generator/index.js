@@ -6,9 +6,9 @@ module.exports = (api, options, rootOptions) => {
   // 命令
   api.extendPackage({
     scripts: {
-      'build-dev': 'vue-cli-service build --mode dev',
-      'build-test': 'vue-cli-service build --mode test',
-      'build': 'vue-cli-service build --mode prod'
+      'build:dev': 'vue-cli-service build --mode dev',
+      'build:test': 'vue-cli-service build --mode test',
+      'build:prod': 'vue-cli-service build --mode prod'
     }
   })
 

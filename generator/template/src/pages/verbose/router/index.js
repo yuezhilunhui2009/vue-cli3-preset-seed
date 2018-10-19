@@ -17,9 +17,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ '@pages/verbose/views/about')
+      path: '/article-list',
+      name: 'article-list',
+      component: () => import(/* webpackChunkName: "article-list" */ '@pages/verbose/views/article-list')
     },
     {
       path: '*',

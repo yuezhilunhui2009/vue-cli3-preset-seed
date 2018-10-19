@@ -3,26 +3,23 @@
     <Header />
     <h1>Hello App!</h1>
     <p>
-      <router-link to="/home">Go to Home</router-link>
-      <router-link to="/about">Go to About</router-link>
+      <router-link to="/home">首页</router-link>
+      <router-link to="/article-list">列表页</router-link>
     </p>
     <p>路径：{{ this.$route.path }}</p>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
-    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '@comps/Header'
-import Footer from '@comps/Footer'
 
 export default {
   name: '',
   components: {
-    Header,
-    Footer
+    Header
   },
   props: {},
   data () {

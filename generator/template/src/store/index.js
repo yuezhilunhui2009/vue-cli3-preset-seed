@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-// 项目级共享 store module
-import user from '@store/modules/user'
-import todos from '@store/modules/todos'
+// 项目级共享 store modules
+import commonModules from '@store/modules/'
 Vue.use(Vuex)
 
 /**
@@ -28,29 +27,11 @@ const generateStore = ({
     mutations,
     actions,
     modules: {
-      user,
-      todos,
+      ...commonModules,
       ...modules
     },
     strict: process.env.NODE_ENV !== 'production'
   })
-
-  if (module.hot) {
-    // 使 action 和 mutation 成为可热重载模块
-    module.hot.accept(['@store/modules/user', '@store/modules/todos'], () => {
-      // 获取更新后的模块
-      // 因为 babel 6 的模块编译格式问题，这里需要加上 `.default`
-      const user = require('@store/modules/user').default
-      const todos = require('@store/modules/todos').default
-      // 加载新模块
-      store.hotUpdate({
-        modules: {
-          user,
-          todos
-        }
-      })
-    })
-  }
 
   return store
 }

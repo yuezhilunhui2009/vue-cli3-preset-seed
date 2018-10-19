@@ -10,4 +10,4 @@ jobs:
     - stage: lint
       script: "npm run lint"
     - stage: build_demo
-      script: "vue create --preset . preset-demo --bare && cd preset-demo && npm run build"
+      script: "vue create --preset . preset-demo && cd preset-demo && npm run build:prod"
