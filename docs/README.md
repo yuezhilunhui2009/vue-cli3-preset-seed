@@ -81,3 +81,14 @@ module.exports = (api, options, rootOptions) => {
   api.render('./template')
 }
 ```
+
+## 问题：如何让 vue-cli3 使用项目模板的 README.md ？
+### 结论
+* 在 /generator/index.js 中修改环境变量:
+```js
+// 屏蔽 generator 之后的文件写入操作
+api.onCreateComplete(() => {
+    process.env.VUE_CLI_SKIP_WRITE = true
+})
+```
+目的是令 writeFileTree 函数不写文件直接退出，这样 vue-cli3 在写 README.md 时会直接跳过。
