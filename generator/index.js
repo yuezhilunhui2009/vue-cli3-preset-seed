@@ -86,4 +86,9 @@ module.exports = (api, options, rootOptions) => {
 
   // 生成项目文件
   api.render('./template')
+
+  // 屏蔽 generator 之后的文件写入操作
+  api.onCreateComplete(() => {
+    process.env.VUE_CLI_SKIP_WRITE = true
+  })
 }
