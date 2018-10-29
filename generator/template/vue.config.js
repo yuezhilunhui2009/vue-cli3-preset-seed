@@ -48,7 +48,7 @@ const addStyleResource = (rule) => {
 }
 
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production' ? 'http://cdn_static_root/' : '/',
+  baseUrl: process.env.NODE_ENV === 'production' ? 'http://cdn_static_root/' : '.',
   outputDir: 'dist',
   assetsDir: 'static',
   filenameHashing: true,
