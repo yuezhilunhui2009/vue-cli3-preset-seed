@@ -171,10 +171,3 @@ npm run docs:build
 - [x] vuex、vue-router 示例
 - [x] simple、verbose 两个示例页面
 
-2018/10/22 ~ 2018/10/26
-
-- [ ] 创建项目子结构命令
-    - [ ] 创建 vue 组件
-    - [ ] 创建新页面
-    - [ ] 添加 API
-    - [ ] 添加新的 View （SPA的一个视图）
