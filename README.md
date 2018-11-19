@@ -155,6 +155,7 @@ npm run docs:build
 - [x] postcss 配置
     - [x] cssnano 优化 CSS 尺寸
     - [x] autoprefixer 根据 browserlist 进行前缀补齐
+    - [x] postcss-px-to-viewport
 - [x] babel 配置
 - [x] browserslist 配置
 - [x] eslint 配置
