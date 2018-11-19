@@ -26,6 +26,32 @@ module.exports = (api, options, rootOptions) => {
   // 会自动添加 less、less-loader 依赖
   // 自动配置 loader
 
+  // 添加 postcss 插件
+  api.extendPackage({
+    devDependencies: {
+      'postcss-px-to-viewport': '0.0.3'
+    }
+  })
+
+  api.extendPackage({
+    postcss: {
+      'plugins': {
+        'autoprefixer': {},
+        'postcss-px-to-viewport': {
+          'viewportWidth': 750,
+          'viewportHeight': 1334,
+          'unitPrecision': 3,
+          'viewportUnit': 'vw',
+          'selectorBlackList': [
+            'ignore'
+          ],
+          'minPixelValue': 1,
+          'mediaQuery': false
+        }
+      }
+    }
+  })
+
   // 自动导入
   api.extendPackage({
     devDependencies: {
