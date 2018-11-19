@@ -1,7 +1,7 @@
 {
-  "name": "vue-cli3-preset-demo",
+  "name": "vue-cli3-preset-seed",
   "version": "1.0.0",
-  "description": "vue-cli preset",
+  "description": "vue-cli 3 preset, vue-router, vuex",
   "main": "./generator/index.js",
   "scripts": {
     "lint": "eslint ./generator/",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/yuezhilunhui2009/vue-cli3-preset-demo.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yuezhilunhui2009/vue-cli3-preset-demo/issues"
   },
