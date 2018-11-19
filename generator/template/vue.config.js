@@ -16,6 +16,7 @@ const generatePagesConfig = ({ pagesDir, customConfig = {} }) => {
   }
 
   fs.readdirSync(PAGES_DIR)
+    .filter(pageDir => !pageDir.startsWith('.'))
     .reduce((pagesConfig, fileName) => {
       pagesConfig[fileName] = {
         // page 的入口
