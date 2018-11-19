@@ -43,5 +43,8 @@
       "pre-commit": "npm run lint",
       "commit-msg": "commitlint -e"
     }
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   }
 }

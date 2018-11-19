@@ -77,6 +77,12 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
+  api.extendPackage({
+    commitlint: {
+      'extends': ['@commitlint/config-conventional']
+    }
+  })
+
   // 删除 vue-cli3 默认目录
   api.render(files => {
     Object.keys(files)
