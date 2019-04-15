@@ -1,4 +1,30 @@
+import axios from 'axios'
+
 export default {
+  // 请修改为实际的 http api
+  axiosGet () {
+    axios.get('/user?ID=12345')
+      .then(function (response) {
+        console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+  },
+  // 请修改为实际的 http api
+  axiosPost () {
+    axios.post('/user', {
+      firstName: 'Fred',
+      lastName: 'Flintstone'
+    })
+      .then(function (response) {
+        console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+  },
+  // 请修改为实际的 http api
   fetchList () {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

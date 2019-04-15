@@ -18,7 +18,8 @@ module.exports = (api, options, rootOptions) => {
     dependencies: {
       'vue-router': '^3.0.1',
       'vuex': '^3.0.1',
-      'normalize.css': '^8.0.0'
+      'normalize.css': '^8.0.0',
+      'axios': '^0.18.0'
     }
   })
 
