@@ -20,7 +20,7 @@ vue create --preset yuezhilunhui2009/vue-cli3-preset-seed preset-seed-demo
 vue create --preset direct:https://github.com/yuezhilunhui2009/vue-cli3-preset-seed.git preset-seed-demo --clone
 
 # 本地预览
-# 示例链接：http://localhost:8080/simple.html
+# 示例链接：http://localhost:8080/index.html
 # 示例链接：http://localhost:8080/verbose.html
 cd preset-seed-demo && npm run serve
 
@@ -63,7 +63,7 @@ VUE_APP_BUILD_MODE=PROD
     ├── assets                      # 项目级公共资产文件
     ├── components                  # 项目级公共组件
     ├── pages                       # 页面文件夹
-    │   ├── simple                  # 简单页面示例，文件夹名字将作为最终页面名字，例如：dist/simple.html
+    │   ├── index                   # 简单页面示例，文件夹名字将作为最终页面名字，例如：dist/index.html
     │   │   ├── App.vue             # 必须，页面根组件
     │   │   ├── index.js            # 必须，页面入口文件
     │   │   └── index.html          # 必须，页面模板文件
@@ -112,7 +112,7 @@ VUE_APP_BUILD_MODE=PROD
 * 页面文件夹最少需要 App.vue、index.js、index.html 三个文件组成。
 * 最简结构：
 ```bash
-└── simple
+└── index
     ├── App.vue
     ├── index.html
     └── index.js
@@ -172,5 +172,5 @@ npm run docs:build
 - [x] proxy 配置
 - [x] 环境变量配置
 - [x] vuex、vue-router 示例
-- [x] simple、verbose 两个示例页面
+- [x] index（简单页面结构）、verbose（复杂页面结构） 两个示例页面
 
