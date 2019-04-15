@@ -8,6 +8,8 @@ vue-cli3-preset-seed 是一个 web 前端项目骨架，用于配合 Vue.js 开�
 确认计算机已安装 [nodejs v8.11.0+](https://nodejs.org/en/download/) 与 npm
 
 ## 快速开始
+注意：生成项目的 vue.config.js 在 Vue CLI >= 3.3 后 baseUrl 字段改为了 publicPath，如果你是用的 Vue CLI < 3.3，请手动将 publicPath 修改为 baseUrl。
+
 ```bash
 # 安装 vue-cli
 npm install -g @vue/cli
@@ -158,7 +160,7 @@ npm run docs:build
     - [x] postcss-px-to-viewport
 - [x] babel 配置
 - [x] browserslist 配置
-- [x] eslint 配置
+- [x] eslint 配置 - 采用 @vue/standard + 自定义 2 个空格缩进规则
 
 2018/10/15 ~ 2018/10/19
 
@@ -166,7 +168,7 @@ npm run docs:build
 - [x] commitlint、@commitlint/config-conventional 配置，检验提交信息格式
 - [x] git-hook 配置，强制 git 提交前执行 eslint、commitlint
 - [x] 自动 @import variables.less
-- [ ] API 层
+- [x] API 层，使用 axios
 - [x] proxy 配置
 - [x] 环境变量配置
 - [x] vuex、vue-router 示例
