@@ -49,7 +49,7 @@ const addStyleResource = (rule) => {
 }
 
 module.exports = {
-  baseUrl: process.env.VUE_APP_BUILD_MODE === 'PROD' ? 'http://cdn_static_root/' : '.',
+  publicPath: process.env.VUE_APP_BUILD_MODE === 'PROD' ? 'http://cdn_static_root/' : '.',
   outputDir: 'dist',
   assetsDir: 'static',
   filenameHashing: true,
