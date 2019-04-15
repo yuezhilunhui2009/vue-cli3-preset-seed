@@ -10,6 +10,7 @@
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+    <a href="./index.html">另外一个项目结构简单的页面 index.html</a>
   </div>
 </template>
 
